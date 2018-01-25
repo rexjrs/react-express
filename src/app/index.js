@@ -1,22 +1,15 @@
 import React, { Component } from 'react';
+import Home from '../views/Home'
 
 export default class App extends Component {
-  constructor(){
-    super()
-    this.state={
-      test: 1
-    }
-  }
   render() {
-    console.log(this.props)
-    //RENDER OPTIONS FOR ROUTING
-    const { isMobile } = this.props;
-    return (
-      <div>
-        <h1>hello world {isMobile ? 'mobile' : 'desktop'}</h1>
-        {this.state.test}
-        <button onClick={()=>this.setState({test: ++this.state.test})}>Add</button>
-      </div>
-    );
+    switch (this.props.path) {
+      case '/':
+        return <Home {...this.props}/>
+        break;
+      default:
+        return <Home {...this.props}/>
+        break;
+    }
   }
 }
