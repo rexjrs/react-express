@@ -47,5 +47,34 @@ module.exports = [
         }
       ].concat(commonLoaders)
     }
+  },
+  {
+    entry: './src/app/browser.js',
+    output: {
+      path: './dist/assets',
+      publicPath: '/',
+      filename: 'bundle.js'
+    },
+    plugins: clientLoaders.concat([
+      new ExtractTextPlugin('index.css', {
+        allChunks: true
+      })
+    ]),
+    module: {
+      loaders: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'babel'
+        },
+        {
+          test: /\.scss$/,
+          loader: ExtractTextPlugin.extract('css!sass')
+        }
+      ]
+    },
+    resolve: {
+      extensions: ['', '.js', '.jsx']
+    }
   }
 ];

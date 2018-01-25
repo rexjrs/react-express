@@ -1,20 +1,29 @@
 {
-  "name": "asdd",
-  "version": "1.0.0",
-  "description": "React server side",
+  "name": "react-server-boilerplate",
+  "version": "1.0.2",
+  "description": "React server side rendering boilerplate",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch src --exec 'npm run build'",
+    "dev": "nodemon ./dist/server.js",
     "build": "webpack",
     "lint": "functionhappy | snazzy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Roilan/react-server-boilerplate"
   },
   "keywords": [
     "react",
     "react server",
     "reactjs"
   ],
-  "author": "Thomas Charlesworth",
+  "author": "Roilan <roilan14@gmail.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Roilan/react-server-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Roilan/react-server-boilerplate",
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
