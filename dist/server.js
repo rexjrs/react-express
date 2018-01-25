@@ -310,7 +310,6 @@ module.exports =
 	    _createClass(Page, [{
 	        key: 'render',
 	        value: function render() {
-	            console.log('wat');
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -361,7 +360,7 @@ module.exports =
 	    _createClass(Header, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement('div', null);
+	            return _react2.default.createElement('div', { style: styles.container });
 	        }
 	    }]);
 
@@ -371,7 +370,16 @@ module.exports =
 	exports.default = Header;
 
 
-	var styles = {};
+	var styles = {
+	    container: {
+	        height: 60,
+	        borderBottom: '1px solid #CCC',
+	        position: 'fixed',
+	        top: 0,
+	        left: 0,
+	        right: 0
+	    }
+	};
 
 /***/ }),
 /* 10 */

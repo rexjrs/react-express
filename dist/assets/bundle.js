@@ -58,7 +58,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	(0, _reactDom.render)(_react2.default.createElement(_index2.default, window.__APP_INITIAL_STATE__), document.getElementById('root'));
+	(0, _reactDom.hydrate)(_react2.default.createElement(_index2.default, window.__APP_INITIAL_STATE__), document.getElementById('root'));
 
 /***/ }),
 /* 1 */
@@ -18358,7 +18358,6 @@
 	    _createClass(Page, [{
 	        key: 'render',
 	        value: function render() {
-	            console.log('wat');
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -18409,7 +18408,7 @@
 	    _createClass(Header, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement('div', null);
+	            return _react2.default.createElement('div', { style: styles.container });
 	        }
 	    }]);
 
@@ -18419,7 +18418,16 @@
 	exports.default = Header;
 
 
-	var styles = {};
+	var styles = {
+	    container: {
+	        height: 60,
+	        borderBottom: '1px solid #CCC',
+	        position: 'fixed',
+	        top: 0,
+	        left: 0,
+	        right: 0
+	    }
+	};
 
 /***/ })
 /******/ ]);

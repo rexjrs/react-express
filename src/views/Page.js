@@ -3,7 +3,6 @@ import Header from '../components/Header'
 
 export default class Page extends React.PureComponent {
     render() {
-        console.log('wat')
         return (
             <div>
                 <Header />
