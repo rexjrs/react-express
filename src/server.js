@@ -7,4 +7,5 @@ server.use('/assets', express.static('assets'));
 
 router({server})
 
-server.listen(8080);
+server.listen(8008);
+console.log('listening')

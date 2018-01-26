@@ -63,7 +63,8 @@ module.exports =
 
 	(0, _router2.default)({ server: server });
 
-	server.listen(8080);
+	server.listen(8008);
+	console.log('listening');
 
 /***/ }),
 /* 1 */
