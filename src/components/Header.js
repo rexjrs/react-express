@@ -1,22 +1,28 @@
 import React from 'react'
-
+import { domain } from '../config/constants'
+const tiles = [
+    {name: 'About', path: '/'},
+    {name: 'Experience', path: '/experience'},
+    {name: 'Portfolio', path: '/portfolio'},
+    {name: 'Contact', path: '/contact'},
+]
 export default class Header extends React.PureComponent {
+    renderTiles(data) {
+        const mapped = data.map((val) => {
+            const active = val.path === this.props.path ? 'active' : ''
+            return (
+                <div className="header-tiles" key={val.name}>
+                    <a className={`header-tiles-links ${active}`} href={`${domain}/${val.name.toLowerCase()}`}>{val.name}</a>
+                </div>
+            )
+        })
+        return mapped
+    }
     render() {
-        return(
-            <div style={styles.container}>
-
+        return (
+            <div className="header">
+                {this.renderTiles(tiles)}
             </div>
         )
-    }
-}
-
-const styles = {
-    container: {
-        height: 60,
-        borderBottom: '1px solid #CCC',
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0
     }
 }

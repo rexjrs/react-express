@@ -63,7 +63,7 @@ module.exports =
 
 	(0, _router2.default)({ server: server });
 
-	server.listen(8008);
+	server.listen(8080);
 	console.log('listening');
 
 /***/ }),
@@ -120,7 +120,7 @@ module.exports =
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _template = __webpack_require__(10);
+	var _template = __webpack_require__(11);
 
 	var _template2 = _interopRequireDefault(_template);
 
@@ -238,7 +238,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Page = __webpack_require__(8);
+	var _constants = __webpack_require__(8);
+
+	var _Page = __webpack_require__(9);
 
 	var _Page2 = _interopRequireDefault(_Page);
 
@@ -262,7 +264,15 @@ module.exports =
 	    _createClass(Home, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement(_Page2.default, null);
+	            return _react2.default.createElement(
+	                _Page2.default,
+	                this.props,
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'profile-picture-container' },
+	                    _react2.default.createElement('img', { className: 'profile-picture', src: _constants.assetsUrl + '/images/me.jpg' })
+	                )
+	            );
 	        }
 	    }]);
 
@@ -273,6 +283,18 @@ module.exports =
 
 /***/ }),
 /* 8 */
+/***/ (function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var domain = exports.domain = "http://localhost:8080";
+	var assetsUrl = exports.assetsUrl = "/assets/";
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -287,7 +309,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Header = __webpack_require__(9);
+	var _Header = __webpack_require__(10);
 
 	var _Header2 = _interopRequireDefault(_Header);
 
@@ -314,8 +336,12 @@ module.exports =
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement(_Header2.default, null),
-	                this.props.children
+	                _react2.default.createElement(_Header2.default, this.props),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'page-container' },
+	                    this.props.children
+	                )
 	            );
 	        }
 	    }]);
@@ -326,7 +352,7 @@ module.exports =
 	exports.default = Page;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -341,6 +367,8 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _constants = __webpack_require__(8);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -348,6 +376,8 @@ module.exports =
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var tiles = [{ name: 'About', path: '/' }, { name: 'Experience', path: '/experience' }, { name: 'Portfolio', path: '/portfolio' }, { name: 'Contact', path: '/contact' }];
 
 	var Header = function (_React$PureComponent) {
 	    _inherits(Header, _React$PureComponent);
@@ -359,9 +389,32 @@ module.exports =
 	    }
 
 	    _createClass(Header, [{
+	        key: 'renderTiles',
+	        value: function renderTiles(data) {
+	            var _this2 = this;
+
+	            var mapped = data.map(function (val) {
+	                var active = val.path === _this2.props.path ? 'active' : '';
+	                return _react2.default.createElement(
+	                    'div',
+	                    { className: 'header-tiles', key: val.name },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { className: 'header-tiles-links ' + active, href: _constants.domain + '/' + val.name.toLowerCase() },
+	                        val.name
+	                    )
+	                );
+	            });
+	            return mapped;
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement('div', { style: styles.container });
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'header' },
+	                this.renderTiles(tiles)
+	            );
 	        }
 	    }]);
 
@@ -370,34 +423,24 @@ module.exports =
 
 	exports.default = Header;
 
-
-	var styles = {
-	    container: {
-	        height: 60,
-	        borderBottom: '1px solid #CCC',
-	        position: 'fixed',
-	        top: 0,
-	        left: 0,
-	        right: 0
-	    }
-	};
-
 /***/ }),
-/* 10 */
-/***/ (function(module, exports) {
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _constants = __webpack_require__(8);
 
 	exports.default = function (_ref) {
 	  var body = _ref.body,
 	      title = _ref.title,
 	      initialState = _ref.initialState;
 
-	  return "\n    <!DOCTYPE html>\n    <html>\n      <head>\n        <script>window.__APP_INITIAL_STATE__ = " + initialState + "</script>\n        <title>" + title + "</title>\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"/assets/app.css\">\n      </head>\n      \n      <body>\n        <div id=\"root\">" + body + "</div>\n      </body>\n      <script src=\"/assets/bundle.js\"></script>\n    </html>\n  ";
+	  return '\n    <!DOCTYPE html>\n    <html>\n      <head>\n        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n        <script>window.__APP_INITIAL_STATE__ = ' + initialState + '</script>\n        <title>' + title + '</title>\n        <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">\n        <link rel="stylesheet" type="text/css" href="' + _constants.assetsUrl + 'app.css">\n      </head>\n      \n      <body>\n        <div id="root">' + body + '</div>\n      </body>\n      <script src="' + _constants.assetsUrl + 'bundle.js"></script>\n    </html>\n  ';
 	};
 
 /***/ })

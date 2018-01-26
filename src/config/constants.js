@@ -1,1 +1,2 @@
-export const assetsUrl = "http://thomascharlesworth.com/react-express/dist/assets/"
+export const domain = "http://localhost:8080"
+export const assetsUrl = "/assets/"

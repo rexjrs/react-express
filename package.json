@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch src --exec 'npm run build'",
-    "dev": "nodemon ./dist/server.js",
+    "dev": "cd dist && nodemon server.js",
     "build": "webpack",
     "lint": "functionhappy | snazzy"
   },
