@@ -4,12 +4,13 @@ import App from '../app'
 import template from '../views/template'
 
 export default class HomeController {
-    static index({ req, res }) {
+    static portPages({ req, res, title }) {
         const initialState = { path: req.path, params: req.params };
         const appString = renderToString(<App {...initialState} />)
+        console.log(appString)
         res.send(template({
             body: appString,
-            title: 'Thomas Charlesworth - About',
+            title: `Thomas Charlesworth - ${title}`,
             initialState: JSON.stringify(initialState)
         }))
     }

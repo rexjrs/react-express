@@ -1,10 +1,10 @@
 import React from 'react'
 import { domain } from '../config/constants'
 const tiles = [
-    {name: 'About', path: '/'},
-    {name: 'Experience', path: '/experience'},
-    {name: 'Portfolio', path: '/portfolio'},
-    {name: 'Contact', path: '/contact'},
+    { name: 'About', path: '/' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Technologies', path: '/technologies' },
+    { name: 'Contact', path: '/contact' },
 ]
 export default class Header extends React.PureComponent {
     renderTiles(data) {
@@ -12,7 +12,7 @@ export default class Header extends React.PureComponent {
             const active = val.path === this.props.path ? 'active' : ''
             return (
                 <div className="header-tiles" key={val.name}>
-                    <a className={`header-tiles-links ${active}`} href={`${domain}/${val.name.toLowerCase()}`}>{val.name}</a>
+                    <a className={`header-tiles-links ${active}`} href={`${domain}${val.path}`}>{val.name}</a>
                 </div>
             )
         })

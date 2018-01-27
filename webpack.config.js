@@ -21,9 +21,9 @@ var commonLoaders = [
 
 module.exports = [
   {
-    entry: './src/server.js',
+    entry: __dirname + '/src/server.js',
     output: {
-      path: './dist',
+      path: __dirname + '/dist',
       filename: 'server.js',
       libraryTarget: 'commonjs2',
       publicPath: '/'
@@ -43,15 +43,15 @@ module.exports = [
       loaders: [
         {
           test: /\.js$/,
-          loader: 'babel'
+          loader: 'babel-loader'
         }
       ].concat(commonLoaders)
     }
   },
   {
-    entry: './src/app/browser.js',
+    entry: __dirname + '/src/app/browser.js',
     output: {
-      path: './dist/assets',
+      path: __dirname + '/dist/assets',
       publicPath: '/',
       filename: 'bundle.js'
     },
@@ -65,16 +65,16 @@ module.exports = [
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          loader: 'babel'
+          loader: 'babel-loader'
         },
         {
           test: /\.scss$/,
-          loader: ExtractTextPlugin.extract('css!sass')
+          loader: ExtractTextPlugin.extract('css-loader!sass-loader')
         }
       ]
     },
     resolve: {
-      extensions: ['', '.js', '.jsx']
+      extensions: ['.js', '.jsx']
     }
   }
 ];
