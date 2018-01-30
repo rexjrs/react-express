@@ -6,7 +6,6 @@ export default class Portfolio extends Component {
     render() {
         return (
             <Page {...this.props}>
-
                 <style>{
                     `
                     @media screen and (max-width: 1000px) {
