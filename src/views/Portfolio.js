@@ -16,7 +16,7 @@ export default class Portfolio extends Component {
                 tech: 'React Native (IOS/Android), Redux, LightRocket API service'
             },
             {
-                image: `${assetsUrl}/images/joox.PNG`,
+                image: `${assetsUrl}/images/joox.png`,
                 title: 'Joox',
                 desc: `I spent 3 months with the Tencent Thailand team working on the new Joox website. It was built with Next.js so that
                  we could get better SEO offered by the serverside rendering.`,
