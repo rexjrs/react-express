@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { assetsUrl } from '../config/constants'
+import NextPage from '../components/NextPage'
+import { assetsUrl, domain } from '../config/constants'
 import Page from './Page'
 
 export default class Home extends Component {
@@ -18,24 +19,24 @@ export default class Home extends Component {
                 <center><h1>Experience</h1></center>
                 <div className="about-experience">
                     <h3>March 2014 - May 2014: Internship @ MagicBoxAsia - Laravel PHP Developer</h3>
-                    This internship involved programming the back-end dashboard for Magic Box Asia’s 
-                    new website using Laravel PHP framework. 
-                    I worked on building the functions and tools of the admin side of the website to allow content creators to manage, 
-                    create and delete content from the main consumer side of the website. 
+                    This internship involved programming the back-end dashboard for Magic Box Asia’s
+                    new website using Laravel PHP framework.
+                    I worked on building the functions and tools of the admin side of the website to allow content creators to manage,
+                    create and delete content from the main consumer side of the website.
                     This involved working with MySQL database, Amazon S3 and most importantly developing with the Laravel framework.
                     <h3>Nov 2016 - Present: Unicity International - Web/Mobile Developer - (Presently a Contractor)</h3>
-                    I joined Unicity as a fresh graduate. I first started working on the Angular.js site where we developed 12 e-commerce sites 
-                    for 12 different branches of Unicity offices around the world. I also moved on to developing a mobile application for Unicity's 
-                    fitness program using React Native. Finally, I am now working on a new version of the e-commerce sites/mobile apps that are now being 
+                    I joined Unicity as a fresh graduate. I first started working on the Angular.js site where we developed 12 e-commerce sites
+                    for 12 different branches of Unicity offices around the world. I also moved on to developing a mobile application for Unicity's
+                    fitness program using React Native. Finally, I am now working on a new version of the e-commerce sites/mobile apps that are now being
                     built on React and React Native.
                     <h3>Nov 2017 - Jan 2018: Tencent Thailand - Software Engineer Contractor and React Teacher</h3>
-                    After I left my full time job at Unicity, I started contracting for Tencent Thailand and teaching React JS to their developers. 
-                    I worked on a 3 month project where we rebuilt the joox.com website on Next.Js. Previously it had been written with JQuery using 
-                    iFrames in order to allow users to navigate the site without stopping the music player. Next.Js allowed us to develop a more 
-                    performant web app and provided much better SEO rankings for joox.com 
+                    After I left my full time job at Unicity, I started contracting for Tencent Thailand and teaching React JS to their developers.
+                    I worked on a 3 month project where we rebuilt the joox.com website on Next.Js. Previously it had been written with JQuery using
+                    iFrames in order to allow users to navigate the site without stopping the music player. Next.Js allowed us to develop a more
+                    performant web app and provided much better SEO rankings for joox.com
                     <h3>June 2017 - Present: LightRocket - Software Engineer</h3>
-                    I joined the LightRocket team in June 2017 as a contractor working on their new mobile application. 
-                    However, in Jan 2018 I joined LightRocket fulltime and am now in the process of converting their Kohana sites to React. 
+                    I joined the LightRocket team in June 2017 as a contractor working on their new mobile application.
+                    However, in Jan 2018 I joined LightRocket fulltime and am now in the process of converting their Kohana sites to React.
                 </div>
                 <center><h1>Academics</h1></center>
                 <div className="about-experience">
@@ -44,9 +45,7 @@ export default class Home extends Component {
                     <h3>Stamford International University Bangkok</h3>
                     (High Distinction) Bsc Hons. Information Technology - GPA: 3.64/4.00
                 </div>
-                <br/>
-                <center><a className="continue-link" href="">Continue to Technologies</a></center>
-                <br/>
+                <NextPage link={`${domain}/portfolio`} page='Portfolio' />
                 <style>{
                     `
                     h1, h3{
@@ -83,6 +82,7 @@ export default class Home extends Component {
                         margin-right: 20%;
                         font-size: 18px;
                         line-height: 1.5;
+                        color: #555;
                     }
                     .about-bio{
                         padding-top: 20px;
@@ -94,6 +94,7 @@ export default class Home extends Component {
                         margin-right: 20%;
                         font-size: 20px;
                         line-height: 1.5;
+                        color: #555;
                     }
                     .profile-picture{
                         height: 300px;

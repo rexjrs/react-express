@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 16);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,9 +71,9 @@
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(17);
-} else {
   module.exports = __webpack_require__(18);
+} else {
+  module.exports = __webpack_require__(19);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
@@ -320,8 +320,8 @@ module.exports = emptyFunction;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var domain = exports.domain = "http://localhost:8080";
-var assetsUrl = exports.assetsUrl = "/assets/";
+var domain = exports.domain = "http://localhost:3000";
+var assetsUrl = exports.assetsUrl = "/assets";
 
 /***/ }),
 /* 4 */
@@ -461,7 +461,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Header = __webpack_require__(31);
+var _Header = __webpack_require__(32);
 
 var _Header2 = _interopRequireDefault(_Header);
 
@@ -642,6 +642,72 @@ module.exports = warning;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var NextPage = function (_PureComponent) {
+    _inherits(NextPage, _PureComponent);
+
+    function NextPage() {
+        _classCallCheck(this, NextPage);
+
+        return _possibleConstructorReturn(this, (NextPage.__proto__ || Object.getPrototypeOf(NextPage)).apply(this, arguments));
+    }
+
+    _createClass(NextPage, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                _react2.default.Fragment,
+                null,
+                _react2.default.createElement("br", null),
+                _react2.default.createElement(
+                    "center",
+                    null,
+                    _react2.default.createElement(
+                        "a",
+                        { className: "continue-link", href: this.props.link },
+                        "Continue to ",
+                        this.props.page
+                    )
+                ),
+                _react2.default.createElement("br", null),
+                _react2.default.createElement(
+                    "style",
+                    null,
+                    "\n                    .continue-link{\n                        text-decoration: none;\n                    }\n                    "
+                )
+            );
+        }
+    }]);
+
+    return NextPage;
+}(_react.PureComponent);
+
+exports.default = NextPage;
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -654,7 +720,7 @@ module.exports = warning;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(7);
   var warning = __webpack_require__(8);
-  var ReactPropTypesSecret = __webpack_require__(19);
+  var ReactPropTypesSecret = __webpack_require__(20);
   var loggedTypeFailures = {};
 }
 
@@ -705,7 +771,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -744,7 +810,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -825,7 +891,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -867,7 +933,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -938,7 +1004,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -953,7 +1019,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(22);
+var isTextNode = __webpack_require__(23);
 
 /*eslint-disable no-bitwise */
 
@@ -981,7 +1047,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1011,7 +1077,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1021,9 +1087,9 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(20);
+var _reactDom = __webpack_require__(21);
 
-var _index = __webpack_require__(29);
+var _index = __webpack_require__(30);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -1032,7 +1098,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _reactDom.hydrate)(_react2.default.createElement(_index2.default, window.__APP_INITIAL_STATE__), document.getElementById('root'));
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1060,7 +1126,7 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1086,7 +1152,7 @@ var emptyObject = __webpack_require__(5);
 var invariant = __webpack_require__(7);
 var warning = __webpack_require__(8);
 var emptyFunction = __webpack_require__(2);
-var checkPropTypes = __webpack_require__(9);
+var checkPropTypes = __webpack_require__(10);
 
 // TODO: this is special because it gets imported during build.
 
@@ -2425,7 +2491,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2444,7 +2510,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2482,15 +2548,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(21);
+  module.exports = __webpack_require__(22);
 } else {
-  module.exports = __webpack_require__(24);
+  module.exports = __webpack_require__(25);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2506,7 +2572,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),l=__webpack_require__(10),B=__webpack_require__(4),C=__webpack_require__(2),ba=__webpack_require__(11),da=__webpack_require__(12),ea=__webpack_require__(13),fa=__webpack_require__(14),ia=__webpack_require__(15),D=__webpack_require__(5);
+var aa=__webpack_require__(0),l=__webpack_require__(11),B=__webpack_require__(4),C=__webpack_require__(2),ba=__webpack_require__(12),da=__webpack_require__(13),ea=__webpack_require__(14),fa=__webpack_require__(15),ia=__webpack_require__(16),D=__webpack_require__(5);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -2726,7 +2792,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2741,7 +2807,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
  * @typechecks
  */
 
-var isNode = __webpack_require__(23);
+var isNode = __webpack_require__(24);
 
 /**
  * @param {*} object The object to check.
@@ -2754,7 +2820,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2782,7 +2848,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2806,18 +2872,18 @@ if (process.env.NODE_ENV !== "production") {
 var React = __webpack_require__(0);
 var invariant = __webpack_require__(7);
 var warning = __webpack_require__(8);
-var ExecutionEnvironment = __webpack_require__(10);
+var ExecutionEnvironment = __webpack_require__(11);
 var _assign = __webpack_require__(4);
 var emptyFunction = __webpack_require__(2);
-var EventListener = __webpack_require__(11);
-var getActiveElement = __webpack_require__(12);
-var shallowEqual = __webpack_require__(13);
-var containsNode = __webpack_require__(14);
-var focusNode = __webpack_require__(15);
+var EventListener = __webpack_require__(12);
+var getActiveElement = __webpack_require__(13);
+var shallowEqual = __webpack_require__(14);
+var containsNode = __webpack_require__(15);
+var focusNode = __webpack_require__(16);
 var emptyObject = __webpack_require__(5);
-var checkPropTypes = __webpack_require__(9);
-var hyphenateStyleName = __webpack_require__(25);
-var camelizeStyleName = __webpack_require__(27);
+var checkPropTypes = __webpack_require__(10);
+var hyphenateStyleName = __webpack_require__(26);
+var camelizeStyleName = __webpack_require__(28);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -18184,7 +18250,7 @@ module.exports = reactDom;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18199,7 +18265,7 @@ module.exports = reactDom;
 
 
 
-var hyphenate = __webpack_require__(26);
+var hyphenate = __webpack_require__(27);
 
 var msPattern = /^ms-/;
 
@@ -18226,7 +18292,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18262,7 +18328,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18277,7 +18343,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(28);
+var camelize = __webpack_require__(29);
 
 var msPattern = /^-ms-/;
 
@@ -18305,7 +18371,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18340,7 +18406,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18356,19 +18422,19 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Home = __webpack_require__(30);
+var _Home = __webpack_require__(31);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Technology = __webpack_require__(32);
+var _Technology = __webpack_require__(33);
 
 var _Technology2 = _interopRequireDefault(_Technology);
 
-var _Portfolio = __webpack_require__(33);
+var _Portfolio = __webpack_require__(35);
 
 var _Portfolio2 = _interopRequireDefault(_Portfolio);
 
-var _Contact = __webpack_require__(34);
+var _Contact = __webpack_require__(37);
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
@@ -18418,7 +18484,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18433,6 +18499,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _NextPage = __webpack_require__(9);
+
+var _NextPage2 = _interopRequireDefault(_NextPage);
 
 var _constants = __webpack_require__(3);
 
@@ -18535,21 +18605,11 @@ var Home = function (_Component) {
                     ),
                     '(High Distinction) Bsc Hons. Information Technology - GPA: 3.64/4.00'
                 ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement(
-                    'center',
-                    null,
-                    _react2.default.createElement(
-                        'a',
-                        { className: 'continue-link', href: '' },
-                        'Continue to Technologies'
-                    )
-                ),
-                _react2.default.createElement('br', null),
+                _react2.default.createElement(_NextPage2.default, { link: _constants.domain + '/portfolio', page: 'Portfolio' }),
                 _react2.default.createElement(
                     'style',
                     null,
-                    '\n                    h1, h3{\n                        font-weight: 300 !important;\n                    }\n                    h3{\n                        border-bottom: 1px solid #CCC;\n                    }\n                    @media screen and (max-width: 1000px) {\n                        .about-bio{\n                            margin-left: 10% !important;\n                            margin-right: 10% !important;\n                        }\n                        .about-experience{\n                            margin-left: 10% !important;\n                            margin-right: 10% !important; \n                        }\n                    }\n                    @media screen and (max-width: 600px) {\n                        .about-experience{\n                            margin-left: 5% !important;\n                            margin-right: 5% !important; \n                        }\n                    }\n                    .continue-link{\n                        text-decoration: none;\n                    }\n                    .about-experience{\n                        padding-top: 20px;\n                        display: flex;\n                        flex-direction: column;\n                        text-align: left;\n                        margin-left: 20%;\n                        margin-right: 20%;\n                        font-size: 18px;\n                        line-height: 1.5;\n                    }\n                    .about-bio{\n                        padding-top: 20px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        text-align: center;\n                        margin-left: 20%;\n                        margin-right: 20%;\n                        font-size: 20px;\n                        line-height: 1.5;\n                    }\n                    .profile-picture{\n                        height: 300px;\n                        width: 300px;\n                        border-radius: 150px;\n                    }\n                    .profile-picture-container{\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        padding-top: 20px;\n                    }\n                    '
+                    '\n                    h1, h3{\n                        font-weight: 300 !important;\n                    }\n                    h3{\n                        border-bottom: 1px solid #CCC;\n                    }\n                    @media screen and (max-width: 1000px) {\n                        .about-bio{\n                            margin-left: 10% !important;\n                            margin-right: 10% !important;\n                        }\n                        .about-experience{\n                            margin-left: 10% !important;\n                            margin-right: 10% !important; \n                        }\n                    }\n                    @media screen and (max-width: 600px) {\n                        .about-experience{\n                            margin-left: 5% !important;\n                            margin-right: 5% !important; \n                        }\n                    }\n                    .continue-link{\n                        text-decoration: none;\n                    }\n                    .about-experience{\n                        padding-top: 20px;\n                        display: flex;\n                        flex-direction: column;\n                        text-align: left;\n                        margin-left: 20%;\n                        margin-right: 20%;\n                        font-size: 18px;\n                        line-height: 1.5;\n                        color: #555;\n                    }\n                    .about-bio{\n                        padding-top: 20px;\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        text-align: center;\n                        margin-left: 20%;\n                        margin-right: 20%;\n                        font-size: 20px;\n                        line-height: 1.5;\n                        color: #555;\n                    }\n                    .profile-picture{\n                        height: 300px;\n                        width: 300px;\n                        border-radius: 150px;\n                    }\n                    .profile-picture-container{\n                        display: flex;\n                        align-items: center;\n                        justify-content: center;\n                        padding-top: 20px;\n                    }\n                    '
                 )
             );
         }
@@ -18561,7 +18621,7 @@ var Home = function (_Component) {
 exports.default = Home;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18634,7 +18694,7 @@ var Header = function (_React$PureComponent) {
 exports.default = Header;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18649,6 +18709,14 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _TechItem = __webpack_require__(34);
+
+var _TechItem2 = _interopRequireDefault(_TechItem);
+
+var _NextPage = __webpack_require__(9);
+
+var _NextPage2 = _interopRequireDefault(_NextPage);
 
 var _constants = __webpack_require__(3);
 
@@ -18670,15 +18738,73 @@ var Technology = function (_Component) {
     function Technology() {
         _classCallCheck(this, Technology);
 
-        return _possibleConstructorReturn(this, (Technology.__proto__ || Object.getPrototypeOf(Technology)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Technology.__proto__ || Object.getPrototypeOf(Technology)).call(this));
+
+        _this.data = [{
+            image: _constants.assetsUrl + '/images/firebase.png',
+            title: 'Firebase',
+            tech: 'Javascript'
+        }, {
+            image: _constants.assetsUrl + '/images/mysql.png',
+            title: 'MySQL',
+            tech: 'SQL'
+        }, {
+            image: _constants.assetsUrl + '/images/flask.png',
+            title: 'Flask',
+            tech: 'Python'
+        }, {
+            image: _constants.assetsUrl + '/images/react.png',
+            title: 'React JS + React Native',
+            tech: 'Javascript'
+        }, {
+            image: _constants.assetsUrl + '/images/node.jpg',
+            title: 'Node JS',
+            tech: 'Javascript'
+        }, {
+            image: _constants.assetsUrl + '/images/express.png',
+            title: 'Express',
+            tech: 'Javascript'
+        }, {
+            image: _constants.assetsUrl + '/images/redux.png',
+            title: 'Redux',
+            tech: 'Javascript'
+        }, {
+            image: _constants.assetsUrl + '/images/mobx.png',
+            title: 'MobX',
+            tech: 'Javascript'
+        }, {
+            image: _constants.assetsUrl + '/images/laravel.png',
+            title: 'Laravel',
+            tech: 'PHP'
+        }, {
+            image: _constants.assetsUrl + '/images/jquery.png',
+            title: 'JQuery',
+            tech: 'JQuery'
+        }, {
+            image: _constants.assetsUrl + '/images/bootstrap.png',
+            title: 'Bootstrap',
+            tech: 'HTML+CSS'
+        }];
+        _this.renderRow = _this.renderRow.bind(_this);
+        return _this;
     }
 
     _createClass(Technology, [{
+        key: 'renderRow',
+        value: function renderRow(data) {
+            var mapped = data.map(function (val, index) {
+                return _react2.default.createElement(_TechItem2.default, { key: index, image: val.image, title: val.title, desc: val.desc, tech: val.tech });
+            });
+            return mapped;
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _Page2.default,
                 this.props,
+                this.renderRow(this.data),
+                _react2.default.createElement(_NextPage2.default, { link: _constants.domain + '/contact', page: 'Contact' }),
                 _react2.default.createElement(
                     'style',
                     null,
@@ -18694,7 +18820,7 @@ var Technology = function (_Component) {
 exports.default = Technology;
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18709,6 +18835,92 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PortItem = function (_PureComponent) {
+    _inherits(PortItem, _PureComponent);
+
+    function PortItem() {
+        _classCallCheck(this, PortItem);
+
+        return _possibleConstructorReturn(this, (PortItem.__proto__ || Object.getPrototypeOf(PortItem)).apply(this, arguments));
+    }
+
+    _createClass(PortItem, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                _react2.default.Fragment,
+                null,
+                _react2.default.createElement(
+                    "div",
+                    { className: "item-wrapper" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "item-image" },
+                        _react2.default.createElement("img", { src: this.props.image, alt: "LightRocket" })
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "item-desc" },
+                        _react2.default.createElement(
+                            "h1",
+                            null,
+                            this.props.title
+                        ),
+                        this.props.desc,
+                        _react2.default.createElement(
+                            "h3",
+                            null,
+                            this.props.tech
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "style",
+                    null,
+                    "\n                    h1, h3{\n                        font-weight: 300 !important;\n                    }\n                    @media screen and (max-width: 1000px) {\n                        .item-wrapper{\n                            margin-right: 10% !important;\n                            margin-left: 10% !important;\n                        }\n                    }\n                    @media screen and (max-width: 800px) {\n                        .item-wrapper{\n                            margin-right: 5% !important;\n                            margin-left: 5% !important;\n                        }\n                    }\n                    @media screen and (max-width: 650px) {\n                        .item-wrapper{\n                            flex-direction: column !important;\n                        }\n                        .item-desc{\n                            padding-top: 20px;\n                        }\n                    }\n                    .item-wrapper{\n                        display: flex;\n                        flex-direction: row;\n                        margin-right: 20%;\n                        margin-left: 20%;\n                        padding-top: 40px;\n                    }\n                    .item-image{\n                        display: flex;\n                        flex: 0.5;\n                        justify-content: center;\n                        align-items: center;\n                    }\n                    .item-image img{\n                        height: 150px;\n                        width: 150px;\n                        border-radius: 75px;\n                        box-shadow: 0px 0px 11px -4px;\n\n                    }\n                    .item-desc{\n                        display: flex;\n                        flex-direction: column;\n                        flex: 0.5;\n                        justify-content: center;\n                        align-items: center;\n                        color: #555;\n                    }\n                    "
+                )
+            );
+        }
+    }]);
+
+    return PortItem;
+}(_react.PureComponent);
+
+exports.default = PortItem;
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _NextPage = __webpack_require__(9);
+
+var _NextPage2 = _interopRequireDefault(_NextPage);
+
+var _PortItem = __webpack_require__(36);
+
+var _PortItem2 = _interopRequireDefault(_PortItem);
 
 var _constants = __webpack_require__(3);
 
@@ -18730,19 +18942,63 @@ var Portfolio = function (_Component) {
     function Portfolio() {
         _classCallCheck(this, Portfolio);
 
-        return _possibleConstructorReturn(this, (Portfolio.__proto__ || Object.getPrototypeOf(Portfolio)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Portfolio.__proto__ || Object.getPrototypeOf(Portfolio)).call(this));
+
+        _this.data = [{
+            image: _constants.assetsUrl + '/images/lightrocket.PNG',
+            title: 'LightRocket',
+            desc: 'LightRocket is an app currently in development for LightRocketMedia.\n                The app automatically syncs the user\'s images to the LightRocket archive platform for photographers.',
+            tech: 'React Native (IOS/Android), Redux, LightRocket API service'
+        }, {
+            image: _constants.assetsUrl + '/images/joox.PNG',
+            title: 'Joox',
+            desc: 'I spent 3 months with the Tencent Thailand team working on the new Joox website. It was built with Next.js so that\n                 we could get better SEO offered by the serverside rendering.',
+            tech: 'ReactJS, Next.JS, Tencent API service'
+        }, {
+            image: _constants.assetsUrl + '/images/chickenapp.png',
+            title: 'Unicity Unishop Mobile App',
+            desc: 'Unishop is Unicity International\'s next mobile app for distributors around the world to manage\n                their MLM business. It features many of the tools required for MLM distributors to check their commission statements,\n                 shop for new products and view their genealogy.',
+            tech: 'React Native (IOS/Android), MobX, Hydra API service'
+        }, {
+            image: _constants.assetsUrl + '/images/membercd.png',
+            title: 'Unicity Unishop Web App',
+            desc: 'Unishop is Unicity International\'s next web app for distributors around the world to manage\n                their MLM business. It features many of the tools required for MLM distributors to check their commission statements,\n                 shop for new products and view their genealogy.',
+            tech: 'React JS, MobX, Hydra API service'
+        }, {
+            image: _constants.assetsUrl + '/images/ifit1.PNG',
+            title: 'Unicity Project U',
+            desc: 'Project U is a fitness mobile app built for Unicity fitness trainers to manage and coach their fitness team.\n                 It allows participants to track their meals, exercises, weight and much more. Coaches are then able to give feedback \n                 to their participants.',
+            tech: 'React Native (IOS/Android), MobX, AWS Lambda + RDS'
+        }, {
+            image: _constants.assetsUrl + '/images/graph.png',
+            title: 'React Native Touchable Graph',
+            desc: 'This graph component for React Native allows developers to plot a line graph so that users can interact with their\n                 finger to see the data points. More: https://github.com/rexjrs/react-native-touchable-graph',
+            tech: 'React Native (IOS/Android)'
+        }];
+        _this.renderRow = _this.renderRow.bind(_this);
+        return _this;
     }
 
     _createClass(Portfolio, [{
+        key: 'renderRow',
+        value: function renderRow(data) {
+            var mapped = data.map(function (val, index) {
+                return _react2.default.createElement(_PortItem2.default, { key: index, image: val.image, title: val.title, desc: val.desc, tech: val.tech });
+            });
+            return mapped;
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 _Page2.default,
                 this.props,
+                this.renderRow(this.data),
+                _react2.default.createElement(_NextPage2.default, { link: _constants.domain + '/technologies', page: 'Technologies' }),
                 _react2.default.createElement(
                     'style',
                     null,
-                    '\n                    @media screen and (max-width: 1000px) {\n\n                    }\n                    '
+                    '\n                    h1{\n                        font-weight: 300 !important;\n                    }\n                    @media screen and (max-width: 1000px) {\n                        .item-wrapper{\n                            margin-right: 10% !important;\n                            margin-left: 10% !important;\n                        }\n                    }\n                    @media screen and (max-width: 800px) {\n                        .item-wrapper{\n                            margin-right: 5% !important;\n                            margin-left: 5% !important;\n                        }\n                    }\n                    @media screen and (max-width: 650px) {\n                        .item-wrapper{\n                            flex-direction: column !important;\n                        }\n                        .item-desc{\n                            padding-top: 20px;\n                        }\n                    }\n                    .item-wrapper{\n                        display: flex;\n                        flex-direction: row;\n                        margin-right: 20%;\n                        margin-left: 20%;\n                        padding-top: 40px;\n                    }\n                    .item-image{\n                        display: flex;\n                        flex: 0.5;\n                        justify-content: center;\n                        align-items: center;\n                    }\n                    .item-image img{\n                        max-height: 500px;\n                        box-shadow: 0px 0px 11px -4px;\n                        max-width: 400px;\n                    }\n                    .item-desc{\n                        display: flex;\n                        flex-direction: column;\n                        flex: 0.5;\n                        justify-content: center;\n                        align-items: flex-start;\n                        color: #555;\n                    }\n                    '
                 )
             );
         }
@@ -18754,7 +19010,85 @@ var Portfolio = function (_Component) {
 exports.default = Portfolio;
 
 /***/ }),
-/* 34 */
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PortItem = function (_PureComponent) {
+    _inherits(PortItem, _PureComponent);
+
+    function PortItem() {
+        _classCallCheck(this, PortItem);
+
+        return _possibleConstructorReturn(this, (PortItem.__proto__ || Object.getPrototypeOf(PortItem)).apply(this, arguments));
+    }
+
+    _createClass(PortItem, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                _react2.default.Fragment,
+                null,
+                _react2.default.createElement(
+                    "div",
+                    { className: "item-wrapper" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "item-image" },
+                        _react2.default.createElement("img", { src: this.props.image, alt: "LightRocket" })
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "item-desc" },
+                        _react2.default.createElement(
+                            "h1",
+                            null,
+                            this.props.title
+                        ),
+                        this.props.desc,
+                        _react2.default.createElement(
+                            "h3",
+                            null,
+                            this.props.tech
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "style",
+                    null,
+                    "\n                    h1, h3{\n                        font-weight: 300 !important;\n                    }\n                    @media screen and (max-width: 1000px) {\n                        .item-wrapper{\n                            margin-right: 10% !important;\n                            margin-left: 10% !important;\n                        }\n                    }\n                    @media screen and (max-width: 800px) {\n                        .item-wrapper{\n                            margin-right: 5% !important;\n                            margin-left: 5% !important;\n                        }\n                    }\n                    @media screen and (max-width: 650px) {\n                        .item-wrapper{\n                            flex-direction: column !important;\n                        }\n                        .item-desc{\n                            padding-top: 20px;\n                        }\n                    }\n                    .item-wrapper{\n                        display: flex;\n                        flex-direction: row;\n                        margin-right: 20%;\n                        margin-left: 20%;\n                        padding-top: 40px;\n                    }\n                    .item-image{\n                        display: flex;\n                        flex: 0.5;\n                        justify-content: center;\n                        align-items: center;\n                    }\n                    .item-image img{\n                        max-height: 500px;\n                        box-shadow: 0px 0px 11px -4px;\n                    }\n                    .item-desc{\n                        display: flex;\n                        flex-direction: column;\n                        flex: 0.5;\n                        justify-content: center;\n                        align-items: flex-start;\n                        color: #555;\n                    }\n                    "
+                )
+            );
+        }
+    }]);
+
+    return PortItem;
+}(_react.PureComponent);
+
+exports.default = PortItem;
+
+/***/ }),
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18800,9 +19134,33 @@ var Contact = function (_Component) {
                 _Page2.default,
                 this.props,
                 _react2.default.createElement(
+                    'center',
+                    null,
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        'Phone: +66 094-648-1922'
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'links', href: 'mailto:thomas.charlesworths@gmail.com?Subject=I saw your portfolio!', target: '_top' },
+                        'thomas.charlesworths@gmail.com'
+                    ),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement('br', null),
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'links', href: 'skype:thomas.charlesworthless?userinfo' },
+                        'Contact me on Skype'
+                    )
+                ),
+                _react2.default.createElement(
                     'style',
                     null,
-                    '\n                    @media screen and (max-width: 1000px) {\n\n                    }\n                    '
+                    '\n                    h3{\n                        font-weight: 300 !important;\n                        margin: 0px !important;\n                    }\n                    .links{\n                        text-decoration: none;\n                    }\n                    '
                 )
             );
         }

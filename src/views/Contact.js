@@ -6,11 +6,22 @@ export default class Contact extends Component {
     render() {
         return (
             <Page {...this.props}>
-
+                <center>
+                    <br/><br/>
+                    <h3>Phone: +66 094-648-1922</h3>
+                    <br/>
+                    <a className="links" href="mailto:thomas.charlesworths@gmail.com?Subject=I saw your portfolio!" target="_top">thomas.charlesworths@gmail.com</a>
+                    <br/><br/>
+                    <a className="links" href="skype:thomas.charlesworthless?userinfo">Contact me on Skype</a>
+                </center>
                 <style>{
                     `
-                    @media screen and (max-width: 1000px) {
-
+                    h3{
+                        font-weight: 300 !important;
+                        margin: 0px !important;
+                    }
+                    .links{
+                        text-decoration: none;
                     }
                     `
                 }
