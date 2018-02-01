@@ -8,7 +8,7 @@ export default class Contact extends Component {
             <Page {...this.props}>
                 <center>
                     <br/><br/>
-                    <h3>Phone: +66 094-648-1922</h3>
+                    <h3 className="links">Phone: +66 094-648-1922</h3>
                     <br/>
                     <a className="links" href="mailto:thomas.charlesworths@gmail.com?Subject=I saw your portfolio!" target="_top">thomas.charlesworths@gmail.com</a>
                     <br/><br/>
