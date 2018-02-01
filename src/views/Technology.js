@@ -19,12 +19,12 @@ export default class Technology extends Component {
                 tech: 'SQL'
             },
             {
-                image: `${assetsUrl}/images/flask.png`,
+                image: `${assetsUrl}/images/flask.jpg`,
                 title: 'Flask',
                 tech: 'Python'
             },
             {
-                image: `${assetsUrl}/images/react.png`,
+                image: `${assetsUrl}/images/react.jpg`,
                 title: 'React JS + React Native',
                 tech: 'Javascript'
             },
@@ -34,7 +34,7 @@ export default class Technology extends Component {
                 tech: 'Javascript'
             },
             {
-                image: `${assetsUrl}/images/express.png`,
+                image: `${assetsUrl}/images/express.jpg`,
                 title: 'Express',
                 tech: 'Javascript'
             },
@@ -44,22 +44,22 @@ export default class Technology extends Component {
                 tech: 'Javascript'
             },
             {
-                image: `${assetsUrl}/images/mobx.png`,
+                image: `${assetsUrl}/images/mobx.jpg`,
                 title: 'MobX',
                 tech: 'Javascript'
             },
             {
-                image: `${assetsUrl}/images/laravel.png`,
+                image: `${assetsUrl}/images/laravel.jpg`,
                 title: 'Laravel',
                 tech: 'PHP'
             },
             {
-                image: `${assetsUrl}/images/jquery.png`,
+                image: `${assetsUrl}/images/jquery.jpg`,
                 title: 'JQuery',
                 tech: 'JQuery'
             },
             {
-                image: `${assetsUrl}/images/bootstrap.png`,
+                image: `${assetsUrl}/images/bootstrap.jpg`,
                 title: 'Bootstrap',
                 tech: 'HTML+CSS'
             },

@@ -9,21 +9,21 @@ export default class Portfolio extends Component {
         super()
         this.data = [
             {
-                image: `${assetsUrl}/images/lightrocket.PNG`,
+                image: `${assetsUrl}/images/lightrocket.jpg`,
                 title: 'LightRocket',
                 desc: `LightRocket is an app currently in development for LightRocketMedia.
                 The app automatically syncs the user's images to the LightRocket archive platform for photographers.`,
                 tech: 'React Native (IOS/Android), Redux, LightRocket API service'
             },
             {
-                image: `${assetsUrl}/images/joox.png`,
+                image: `${assetsUrl}/images/joox.jpg`,
                 title: 'Joox',
                 desc: `I spent 3 months with the Tencent Thailand team working on the new Joox website. It was built with Next.js so that
                  we could get better SEO offered by the serverside rendering.`,
                 tech: 'ReactJS, Next.JS, Tencent API service'
             },
             {
-                image: `${assetsUrl}/images/chickenapp.png`,
+                image: `${assetsUrl}/images/chickenapp.jpg`,
                 title: 'Unicity Unishop Mobile App',
                 desc: `Unishop is Unicity International's next mobile app for distributors around the world to manage
                 their MLM business. It features many of the tools required for MLM distributors to check their commission statements,
@@ -31,7 +31,7 @@ export default class Portfolio extends Component {
                 tech: 'React Native (IOS/Android), MobX, Hydra API service'
             },
             {
-                image: `${assetsUrl}/images/membercd.png`,
+                image: `${assetsUrl}/images/membercd.jpg`,
                 title: 'Unicity Unishop Web App',
                 desc: `Unishop is Unicity International's next web app for distributors around the world to manage
                 their MLM business. It features many of the tools required for MLM distributors to check their commission statements,
@@ -39,7 +39,7 @@ export default class Portfolio extends Component {
                 tech: 'React JS, MobX, Hydra API service'
             },
             {
-                image: `${assetsUrl}/images/ifit1.PNG`,
+                image: `${assetsUrl}/images/ifit1.jpg`,
                 title: 'Unicity Project U',
                 desc: `Project U is a fitness mobile app built for Unicity fitness trainers to manage and coach their fitness team.
                  It allows participants to track their meals, exercises, weight and much more. Coaches are then able to give feedback 
@@ -47,7 +47,7 @@ export default class Portfolio extends Component {
                 tech: 'React Native (IOS/Android), MobX, AWS Lambda + RDS'
             },
             {
-                image: `${assetsUrl}/images/graph.png`,
+                image: `${assetsUrl}/images/graph.jpg`,
                 title: 'React Native Touchable Graph',
                 desc: `This graph component for React Native allows developers to plot a line graph so that users can interact with their
                  finger to see the data points. More: https://github.com/rexjrs/react-native-touchable-graph`,
