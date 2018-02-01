@@ -1,2 +1,2 @@
-export const domain = "http://localhost:3000"
+export const domain = "http://thomascharlesworth.com"
 export const assetsUrl = "/assets"
