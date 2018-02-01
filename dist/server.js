@@ -236,7 +236,7 @@ server.use('/assets', _express2.default.static('assets'));
 
 (0, _router2.default)({ server: server });
 
-server.listen(3000);
+server.listen(8008);
 console.log('listening');
 
 /***/ }),
