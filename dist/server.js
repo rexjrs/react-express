@@ -80,7 +80,7 @@ module.exports = require("react");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var domain = exports.domain = "http://localhost:3000";
+var domain = exports.domain = "http://thomascharlesworth.com";
 var assetsUrl = exports.assetsUrl = "/assets";
 
 /***/ }),
