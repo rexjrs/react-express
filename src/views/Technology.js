@@ -24,6 +24,11 @@ export default class Technology extends Component {
                 tech: 'Python'
             },
             {
+                image: `${assetsUrl}/images/nextjs.jpg`,
+                title: 'Next.JS',
+                tech: 'Javascript'
+            },
+            {
                 image: `${assetsUrl}/images/react.jpg`,
                 title: 'React JS + React Native',
                 tech: 'Javascript'
